@@ -3,8 +3,8 @@
     {{ with .Site.Params.avatarurl }}
       <div class="avatar"><img src="{{ . }}" alt="avatar"></div>
     {{ end }}
-    <h1>{{ .Site.Params.author }}</h1>
     <h2>{{ .Site.Params.info }}</h2>
+    <h2>{{ .Site.Params.description }}</h2>
     <ul>
     {{ with .Site.Params.social }}
       {{ range sort .}}
