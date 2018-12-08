@@ -6,10 +6,13 @@
     <input type="checkbox" id="menu-toggle" />
     <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
     <ul class="navigation-list">
+      <li class="navigation-item">
+        <a class="navigation-link" href="https://godoc.org/github.com/eliquious/dproc">Docs</a>
+      </li>
       {{ with .Site.Menus.main}}
         {{ range sort . }}
           <li class="navigation-item">
-            <a class="navigation-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            <a class="navigation-link" href="{{ .URL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}
